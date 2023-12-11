@@ -5,6 +5,7 @@ import std/sugar
 import pkg/argparse
 
 from days/day01 import nil
+from days/day02 import nil
 
 proc implementedDay(msg: string; input: string; part1, part2: static[string -> string]) =
   let text = readFile(input)
@@ -16,6 +17,7 @@ proc doDay(day: int, input: string) =
   let msg = fmt"Day {day:2}: "
   case day
   of 1: implementedDay(msg, input, day01.part1, day01.part2)
+  of 2: implementedDay(msg, input, day02.part1, day02.part2)
   else:
     discard
 

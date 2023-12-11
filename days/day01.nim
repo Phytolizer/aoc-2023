@@ -78,8 +78,6 @@ proc part2*(input: string): string =
     let matches = line.findAll(patt)
     let first = matches[0].firstMatch(patt).digitNum
     let last = line.reversed.firstMatch(revPatt).reversed.digitNum
-    echo line & " => " & $first & " " & $last
     acc += first * 10 + last
 
   $acc
-
